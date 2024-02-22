@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div class="App">
       <p>Post Data</p>
       {loading ? (
         <h4 style={{ color: "red" }}>Loading data..wait</h4>
