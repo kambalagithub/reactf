@@ -27,7 +27,7 @@ function App() {
   return (
     <div style={{ textAlign: "center" }}>
       <h1>
-        Hello World <br /> Counter App using Redux. YaaY!
+        Hello World <br /> Counter App using Redux. WOW!
       </h1>
       <h1>Counter</h1>
       <h1>{counter}</h1>
