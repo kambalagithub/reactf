@@ -1,5 +1,35 @@
 .App {
-  margin: 0px;
-  border: 0px;
+  padding: 0px;
   text-align: center;
+  border-radius: 10px;
+  border: 10px;
+}
+.wap_menu_script {
+  display: inline-block;
+
+  background-color: #fff;
+
+  width: 100%;
+  border-bottom: 1px solid #cdcdcd;
+  padding-left: 30px;
+  padding-right: 10px;
+  padding-bottom: -3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.wap_menu_script * {
+  box-sizing: border-box;
+  box-shadow: #9fb1c7;
+}
+.wap_menu_script li {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 50px;
+  width: 100px;
+  vertical-align: top;
+  white-space: inherit;
+  text-align: center;
+  cursor: pointer;
+  font: 600 15px/19px "Lato", sans-serif;
 }

@@ -1,10 +1,18 @@
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+} from "./redux/reducers/counterReducer";
+import { useSelector, useDispatch } from "react-redux";
 function App() {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState([]);
+  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter.count);
+  console.log(counter);
   useEffect(() => {
     const getPosts = async () => {
       const response = await axios.get(
@@ -14,20 +22,17 @@ function App() {
       setLoading(false);
     };
     getPosts();
-    //resuts.then((error) => console.log("error occured"));
-    //if (error) return <Error error={error} />;
   }, []);
 
   return (
-    <div class="App">
-      <p>Post Data</p>
-      {loading ? (
-        <h4 style={{ color: "red" }}>Loading data..wait</h4>
-      ) : (
-        posts.map((post) => {
-          return <h4 key={post.id}>{post.title}</h4>;
-        })
-      )}
+    <div style={{ textAlign: "center" }}>
+      <h1>
+        Hello World <br /> Counter App using Redux. YaaY!
+      </h1>
+      <h1>Counter</h1>
+      <h1>{counter}</h1>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   );
 }
