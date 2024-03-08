@@ -8,12 +8,11 @@ import {
 } from "./redux/reducers/counterReducer";
 import { useSelector, useDispatch } from "react-redux";
 function App() {
-  const [loading, setLoading] = useState(true);
-  const [posts, setPosts] = useState([]);
+  //const [loading, setLoading] = useState(true);
+  //const [posts, setPosts] = useState([]);
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter.count);
-  console.log(counter);
-  useEffect(() => {
+  /* useEffect(() => {
     const getPosts = async () => {
       const response = await axios.get(
         "https://jsonplaceholder.typicode.com/posts/"
@@ -22,7 +21,7 @@ function App() {
       setLoading(false);
     };
     getPosts();
-  }, []);
+  }, []);*/
 
   return (
     <div style={{ textAlign: "center" }}>
